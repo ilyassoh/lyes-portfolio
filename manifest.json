@@ -2,11 +2,11 @@
   "short_name": "L-yes Portfolio",
   "name": "L-yes | Personal Portfolio",
   "icons": [
-    {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
+    // {
+    //   "src": "favicon.png",
+    //   "sizes": "64x64 32x32 24x24 16x16",
+    //   "type": "image/png"
+    // },
     {
       "src": "avatar_man.svg",
       "type": "image/svg+xml",
