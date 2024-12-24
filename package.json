@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ilyesshamdaoui.github.io/L-yes-Portfolio",
+ 
   "name": "portfolio",
   "version": "0.1.0",
   "private": false,
@@ -31,9 +31,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "clean": "gh-pages-clean",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build && cp build/index.html build/404.html",
+    "build": "react-scripts build && (if exist build\\index.html copy build\\index.html build\\404.html)",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

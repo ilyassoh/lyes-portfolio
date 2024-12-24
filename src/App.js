@@ -11,7 +11,7 @@ import { Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="/L-yes-Portfolio">
+    <Router basename="/lyes-portfolio">
       <div className="App">
         <Navbar />
         <ScrollToTop />
