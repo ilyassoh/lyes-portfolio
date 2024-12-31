@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lyes-portfolio/static/css/main.586aa8e2.css",
+    "main.css": "/lyes-portfolio/static/css/main.ee490e40.css",
     "main.js": "/lyes-portfolio/static/js/main.64720454.js",
     "static/js/453.ace21015.chunk.js": "/lyes-portfolio/static/js/453.ace21015.chunk.js",
     "static/media/IMG_0832-2.jpg": "/lyes-portfolio/static/media/IMG_0832-2.ea9c30de38f7275ee7cb.jpg",
@@ -16,12 +16,12 @@
     "static/media/home-bg.jpg": "/lyes-portfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
     "index.html": "/lyes-portfolio/index.html",
     "static/media/pre.svg": "/lyes-portfolio/static/media/pre.4410c5baaa673cc131da.svg",
-    "main.586aa8e2.css.map": "/lyes-portfolio/static/css/main.586aa8e2.css.map",
+    "main.ee490e40.css.map": "/lyes-portfolio/static/css/main.ee490e40.css.map",
     "main.64720454.js.map": "/lyes-portfolio/static/js/main.64720454.js.map",
     "453.ace21015.chunk.js.map": "/lyes-portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.586aa8e2.css",
+    "static/css/main.ee490e40.css",
     "static/js/main.64720454.js"
   ]
 }
