@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/HI-resume_compressed-7-1.pdf";
+import pdf from "../../Assets/HI-resume_DevOps_ENG_2.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { FaPaperPlane } from "react-icons/fa";
 import { Document, Page } from "react-pdf";

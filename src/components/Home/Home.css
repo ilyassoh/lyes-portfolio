@@ -1,0 +1,267 @@
+.tech-orbit-section {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(4, 20, 40, 0.188), rgba(2, 10, 20, 0.122));
+  min-height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.tech-orbit-container {
+  position: relative;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  z-index: 11;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(64, 153, 255, 0.1);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: orbit 20s linear infinite;
+  box-shadow: 0 0 50px rgba(64, 153, 255, 0.1);
+}
+
+/* Reverse animation direction for middle orbit */
+.middle-orbit {
+  animation: orbit-reverse 15s linear infinite;
+}
+
+.outer-orbit {
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+.middle-orbit {
+  width: 350px;
+  height: 350px;
+  margin-left: -175px;
+  margin-top: -175px;
+}
+
+.inner-orbit {
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+.tech-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(8, 25, 70, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(64, 153, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.tech-icon-inner {
+  font-size: 1.8rem;
+  color: #4099ff;
+  filter: drop-shadow(0 0 8px rgba(64, 153, 255, 0.5));
+}
+
+.tech-icon:hover {
+  transform: scale(1.2) translateZ(20px);
+  background: rgba(64, 153, 255, 0.2);
+  box-shadow: 0 0 25px rgba(64, 153, 255, 0.4);
+}
+
+.tech-icon:hover .tech-icon-inner {
+  animation: pulse 1.5s infinite;
+}
+
+.center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #4099ff;
+  text-shadow: 
+    0 0 10px rgba(64, 153, 255, 0.8),
+    0 0 20px rgba(64, 153, 255, 0.4),
+    0 0 30px rgba(64, 153, 255, 0.2);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 10px rgba(64, 153, 255, 0.8),
+      0 0 20px rgba(64, 153, 255, 0.4),
+      0 0 30px rgba(64, 153, 255, 0.2);
+  }
+  to {
+    text-shadow: 
+      0 0 20px rgba(64, 153, 255, 0.8),
+      0 0 30px rgba(64, 153, 255, 0.4),
+      0 0 40px rgba(64, 153, 255, 0.2);
+  }
+}
+
+.blue-glow {
+  color: #4099ff;
+  text-shadow: 0 0 20px #4099ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes orbit {
+  from { transform: rotateZ(0deg) rotateY(10deg); }
+  to { transform: rotateZ(360deg) rotateY(10deg); }
+}
+
+@keyframes orbit-reverse {
+  from { transform: rotateZ(360deg) rotateX(15deg); }
+  to { transform: rotateZ(0deg) rotateX(15deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Updated positioning with 3D transforms */
+.outer-orbit .tech-icon:nth-child(1) { transform: translate3d(250px, 0, 20px); }
+.outer-orbit .tech-icon:nth-child(2) { transform: translate3d(377px, 0, -20px); }
+.outer-orbit .tech-icon:nth-child(3) { transform: translate3d(0, 250px, 20px); }
+.outer-orbit .tech-icon:nth-child(4) { transform: translate3d(-20px, 177px, -20px); }
+.outer-orbit .tech-icon:nth-child(5) { transform: translate3d(-30px, 0, 20px); }
+
+.middle-orbit .tech-icon:nth-child(1) { transform: translate3d(175px, 0, 40px); }
+.middle-orbit .tech-icon:nth-child(2) { transform: translate3d(24px, 0, -40px); }
+.middle-orbit .tech-icon:nth-child(3) { transform: translate3d(0, 175px, 40px); }
+.middle-orbit .tech-icon:nth-child(4) { transform: translate3d(-124px, 124px, -40px); }
+.middle-orbit .tech-icon:nth-child(5) { transform: translate3d(-175px, 0, 40px); }
+
+.inner-orbit .tech-icon:nth-child(1) { transform: translate3d(100px, 0, 60px); }
+.inner-orbit .tech-icon:nth-child(2) { transform: translate3d(0, 100px, -60px); }
+.inner-orbit .tech-icon:nth-child(3) { transform: translate3d(-100px, 0, 60px); }
+.inner-orbit .tech-icon:nth-child(4) { transform: translate3d(0, -100px, -60px); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .outer-orbit {
+    width: 450px;
+    height: 450px;
+    margin-left: -225px;
+    margin-top: -225px;
+  }
+
+  .middle-orbit {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+  }
+
+  .inner-orbit {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+  }
+
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-icon-inner {
+    font-size: 1.5rem;
+  }
+
+  /* Update responsive positions */
+  .outer-orbit .tech-icon:nth-child(1) { transform: translate3d(200px, 0, 20px); }
+  .outer-orbit .tech-icon:nth-child(2) { transform: translate3d(0, 200px, -20px); }
+  .outer-orbit .tech-icon:nth-child(3) { transform: translate3d(-200px, 0, 20px); }
+  .outer-orbit .tech-icon:nth-child(4) { transform: translate3d(0, -200px, -20px); }
+
+  .middle-orbit .tech-icon:nth-child(1) { transform: translate3d(150px, 0, 40px); }
+  .middle-orbit .tech-icon:nth-child(2) { transform: translate3d(0, 150px, -40px); }
+  .middle-orbit .tech-icon:nth-child(3) { transform: translate3d(-150px, 0, 40px); }
+  .middle-orbit .tech-icon:nth-child(4) { transform: translate3d(0, -150px, -40px); }
+
+  .inner-orbit .tech-icon:nth-child(1) { transform: translate3d(100px, 0, 60px); }
+  .inner-orbit .tech-icon:nth-child(2) { transform: translate3d(0, 100px, -60px); }
+  .inner-orbit .tech-icon:nth-child(3) { transform: translate3d(-100px, 0, 60px); }
+} 
+
+/* Animation durations */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+/* Custom animation delays */
+.animate__delay-0s { animation-delay: 0s; }
+.animate__delay-1s { animation-delay: 0.2s; }
+.animate__delay-2s { animation-delay: 0.4s; }
+.animate__delay-3s { animation-delay: 0.6s; }
+.animate__delay-4s { animation-delay: 0.8s; }
+
+/* Smooth transitions */
+.home-section,
+.home-about-section,
+.tech-orbit-section,
+.experience-section,
+.project-section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.animate__fadeIn,
+.animate__fadeInUp,
+.animate__slideInDown,
+.animate__zoomIn {
+  opacity: 1;
+}
+
+/* Optional: Add some perspective for 3D animations */
+.project-card {
+  perspective: 1000px;
+}
+
+/* Ensure animations only play when in viewport */
+.ScrollTrigger {
+  visibility: hidden;
+}
+
+.ScrollTrigger.is-visible {
+  visibility: visible;
+}
+
+/* If you have a footer, add these styles to it */
+footer, 
+.footer-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure the FIND ME ON section stays at the bottom */
+.contact-section,
+.find-me-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+} 
